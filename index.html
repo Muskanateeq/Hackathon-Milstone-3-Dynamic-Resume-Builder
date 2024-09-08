@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Welcome Screen -->
+        <section id="welcome-screen">
+            <h1>Welcome to the Dynamic Resume Builder</h1>
+            <button id="start-btn">Create Your Resume</button>
+        </section>
+
+        <!-- Resume Form -->
+        <section id="resume-form" class="hidden">
+            <h2>Build Your Resume</h2>
+            <form id="form">
+                <!-- Personal Information -->
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone">
+                </fieldset>
+
+                <!-- Education -->
+                <fieldset>
+                    <legend>Education</legend>
+                    <label for="institution">Institution:</label>
+                    <input type="text" id="institution" name="institution" required>
+                    <label for="degree">Degree:</label>
+                    <input type="text" id="degree" name="degree" required>
+                    <label for="grad-year">Graduation Year:</label>
+                    <input type="number" id="grad-year" name="grad-year" required>
+                </fieldset>
+
+                <!-- Work Experience -->
+                <fieldset>
+                    <legend>Work Experience</legend>
+                    <label for="company">Company:</label>
+                    <input type="text" id="company" name="company" required>
+                    <label for="role">Role:</label>
+                    <input type="text" id="role" name="role" required>
+                    <label for="experience">Description:</label>
+                    <textarea id="experience" name="experience" required></textarea>
+                </fieldset>
+
+                <!-- Skills -->
+                <fieldset>
+                    <legend>Skills</legend>
+                    <label for="skills">Skills (comma-separated):</label>
+                    <input type="text" id="skills" name="skills" required>
+                </fieldset>
+
+                <button type="submit">Generate Resume</button>
+            </form>
+        </section>
+
+        <!-- Generated Resume -->
+        <section id="resume-output" class="hidden">
+            <h2>Your Resume</h2>
+            <div id="resume-content"></div>
+            <button id="edit-btn">Edit Resume</button>
+        </section>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
